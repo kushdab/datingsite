@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Lively Interactive Dating Site</title>
+    <title>Mobile-Optimized Dating Site</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         * {
@@ -27,6 +27,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            padding: 0 1rem;
             animation: fadeIn 2s ease-in-out;
         }
 
@@ -38,14 +39,14 @@
         }
 
         .header h1 {
-            font-size: 3.5rem;
+            font-size: 3rem;
             font-weight: 500;
             margin-bottom: 1rem;
         }
 
         .header p {
-            font-size: 1.4rem;
-            margin-bottom: 2rem;
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
             color: rgba(255, 255, 255, 0.8);
         }
 
@@ -69,10 +70,10 @@
         /* Sign-up section */
         .signup-section {
             background: linear-gradient(to bottom right, rgba(255, 140, 0, 0.8), rgba(255, 99, 71, 0.8));
-            padding: 2.5rem;
+            padding: 2rem;
             border-radius: 15px;
             text-align: center;
-            width: 90%;
+            width: 100%;
             max-width: 400px;
             margin-top: 2rem;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -120,17 +121,15 @@
             transform: scale(1.1);
         }
 
-        /* Footer */
         .footer {
-            position: absolute;
-            bottom: 10px;
             text-align: center;
             color: white;
-            width: 100%;
+            margin-top: 2rem;
+            font-size: 0.9rem;
         }
 
         .footer p {
-            font-size: 1rem;
+            margin-bottom: 0;
         }
 
         /* Animations */
@@ -177,13 +176,65 @@
             }
         }
 
+        /* Responsive styles for mobile devices */
         @media (max-width: 768px) {
             .header h1 {
-                font-size: 2.8rem;
+                font-size: 2.5rem;
             }
 
             .header p {
-                font-size: 1.2rem;
+                font-size: 1rem;
+            }
+
+            .cta-button {
+                font-size: 1rem;
+                padding: 0.75rem 2rem;
+            }
+
+            .signup-section {
+                width: 100%;
+                padding: 1.5rem;
+            }
+
+            .signup-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .submit-button {
+                font-size: 1.1rem;
+                padding: 0.75rem;
+            }
+
+            .footer p {
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .cta-button {
+                font-size: 0.9rem;
+                padding: 0.5rem 1.5rem;
+            }
+
+            .signup-section {
+                padding: 1.2rem;
+            }
+
+            .signup-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .signup-form input {
+                padding: 0.7rem;
+            }
+
+            .submit-button {
+                font-size: 1rem;
+                padding: 0.6rem;
             }
         }
     </style>
@@ -209,7 +260,7 @@
         </section>
 
         <footer class="footer">
-            <p>&copy; 2024 Lively Interactive Dating. All rights reserved.</p>
+            <p>&copy; 2024 Mobile-Optimized Dating. All rights reserved.</p>
         </footer>
     </div>
 </body>
