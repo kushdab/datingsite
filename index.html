@@ -4,15 +4,195 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Interactive Dating Site</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Lively Interactive Dating Site</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: 'Roboto', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Container */
+        .container {
+            background: url('https://images.pexels.com/photos/1024960/pexels-photo-1024960.jpeg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Header section */
+        .header {
+            text-align: center;
+            color: #fff;
+            animation: slideInDown 1.5s ease-out;
+        }
+
+        .header h1 {
+            font-size: 3.5rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .header p {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Call-to-action button */
+        .cta-button {
+            padding: 0.75rem 2.5rem;
+            background-color: #ff7f50;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 30px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            animation: pulse 1.5s infinite;
+        }
+
+        .cta-button:hover {
+            background-color: #ff6347;
+            transform: scale(1.1);
+        }
+
+        /* Sign-up section */
+        .signup-section {
+            background: linear-gradient(to bottom right, rgba(255, 140, 0, 0.8), rgba(255, 99, 71, 0.8));
+            padding: 2.5rem;
+            border-radius: 15px;
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+            margin-top: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 2s ease-out;
+        }
+
+        .signup-section h2 {
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            color: #fff;
+        }
+
+        .signup-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .signup-form input {
+            padding: 0.85rem;
+            border-radius: 10px;
+            border: none;
+            font-size: 1rem;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .signup-form input:focus {
+            box-shadow: 0 0 10px rgba(255, 140, 0, 0.6);
+            transform: scale(1.05);
+        }
+
+        .submit-button {
+            padding: 0.85rem;
+            background-color: #ff7f50;
+            color: white;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background-color: #ff6347;
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            text-align: center;
+            color: white;
+            width: 100%;
+        }
+
+        .footer p {
+            font-size: 1rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.8rem;
+            }
+
+            .header p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <header class="header">
             <h1>Find Your Perfect Match</h1>
-            <p>Join the latest interactive dating platform.</p>
+            <p>Join the latest interactive dating platform and start your love journey!</p>
             <a href="#signup" class="cta-button">Get Started</a>
         </header>
         
@@ -25,11 +205,11 @@
                 <input type="password" name="confirm_password" placeholder="Confirm Password" required>
                 <button type="submit" class="submit-button">Sign Up</button>
             </form>
-            <p>Already have an account? <a href="#">Login here</a></p>
+            <p style="color:white; margin-top: 1rem;">Already have an account? <a href="#" style="color: yellow;">Login here</a></p>
         </section>
 
         <footer class="footer">
-            <p>&copy; 2024 Interactive Dating. All rights reserved.</p>
+            <p>&copy; 2024 Lively Interactive Dating. All rights reserved.</p>
         </footer>
     </div>
 </body>
